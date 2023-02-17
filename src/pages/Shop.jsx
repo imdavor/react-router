@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { getItems } from '../services/data';
 
 const Shop = () => {
@@ -21,6 +21,7 @@ const Shop = () => {
                     <h2>{item.name}</h2>
                 </Link>
             ))}
+            <Outlet />
         </>
     );
 };
